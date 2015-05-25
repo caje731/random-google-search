@@ -1,0 +1,48 @@
+<!doctype html5>
+<html lang="en">
+	<head>
+		<title>Random Search | TechTree</title>
+		{% load staticfiles %}
+		<link rel="stylesheet" href="{% static 'excel_download/css/bootstrap-3.3.2-dist/css/bootstrap.css'%}"/>
+		<link rel="stylesheet" href="{% static 'excel_download/css/custom.css'%}"/>
+		<script src="{% static 'excel_download/js/jquery/dist/jquery.js'%}"></script>
+		<script src="{% static 'excel_download/css/bootstrap-3.3.2-dist/js/bootstrap.js'%}"></script>
+		<script src="{% static 'excel_download/js/handlers.js'%}"></script>
+		<script src="{% static 'excel_download/js/randomwords.js'%}"></script>
+	</head>
+	<body>
+		<div class="row">
+			<div class="col-sm-0 col-md-1">
+			</div>
+			<div class="col-sm-1 col-md-10">
+				
+					<!-- Loading gif-->
+					<div id="wait" class="loading">
+						<img src="{% static 'excel_download/img/ajax-loader.gif' %}" width="30" height="30" /><br>
+					</div>
+
+					<div class="form-group">
+					    <label for="keywords">Enter search keywords:</label>
+					    <input type="text" class="form-control" id="keywords" placeholder="e.g. hyperciti mumbai">
+					    <p class="help-block">Top 10 results from Google will be shown in the table below:</p>
+					</div>
+					<button id="srchsimple" type="submit" class="btn btn-primary" data-loading-text="Searching">Search</button>
+					<button id="srchrandom" type="submit" class="btn btn-warning" data-loading-text="Searching">Generate Random Text and Search</button>
+
+					<br/>
+
+					<table class="table table-striped" title="text">
+						<tbody id="table-results">
+							<tr>
+								<th>Sr. No.</th>
+								<th>Title.</th>
+								<th>URL.</th>
+							</tr>
+						</tbody>
+					</table>
+			</div>
+			<div class="col-sm-0 col-md-1">
+			</div>
+		</div>
+	</body>
+</html>
